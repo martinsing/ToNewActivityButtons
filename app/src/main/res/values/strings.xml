@@ -1,3 +1,18 @@
 <resources>
     <string name="app_name">ToNewActivityButtons</string>
+    <string name="context1">Assigning an OnClickListener via an anonymous class.
+        This is a messy way of handling intents.</string>
+    <string name="context2">Activity wide interface method.
+        Clean, and is the preferred way of handling intents.</string>
+    <string name="context3">Using the onClick attibute of the Button.
+        A new way to handle intents, unsure if it is best practice.</string>
+
+    <string name="activity_1">Activity 1</string>
+    <string name="activity_2">Activity 2</string>
+    <string name="activity_3">Activity 3</string>
+
+    <string name="to_activity_1">To Activity 1</string>
+    <string name="to_activity_2">To Activity 2</string>
+    <string name="to_activity_3">To Activity 3</string>
+    
 </resources>

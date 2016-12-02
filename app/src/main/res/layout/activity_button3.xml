@@ -11,7 +11,7 @@
     tools:context="com.martinsing.tonewactivitybuttons.Button3">
 
     <TextView
-        android:text="Activity 3"
+        android:text="@string/activity_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -29,7 +29,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="goToButton1"
-        android:text="To Activity 1" />
+        android:text="@string/to_activity_1" />
 
     <Button
         android:id="@+id/button2"
@@ -37,6 +37,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="goToButton2"
-        android:text="To Activity 2" />
+        android:text="@string/to_activity_2" />
 
 </LinearLayout>

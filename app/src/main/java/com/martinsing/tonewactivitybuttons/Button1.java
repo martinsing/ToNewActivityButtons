@@ -19,8 +19,7 @@ public class Button1 extends AppCompatActivity {
         setContentView(R.layout.activity_button1);
 
         content1 = (TextView) findViewById(R.id.textView);
-        content1.setText("Assigning an OnClickListener via an anonymous class. " +
-                "This is a messy way of handling intents");
+        content1.setText(R.string.context1);
 
         button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +38,7 @@ public class Button1 extends AppCompatActivity {
                 view.getContext().startActivity(Intent);
             }
         });
+//        The disadvantage here is that there will be a lot of anonymous classes which will make readability difficult when reviewing.
     }
 }
 

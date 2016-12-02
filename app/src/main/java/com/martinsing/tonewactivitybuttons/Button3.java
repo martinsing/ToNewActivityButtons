@@ -16,10 +16,8 @@ public class Button3 extends AppCompatActivity {
         setContentView(R.layout.activity_button3);
 
         content3 = (TextView) findViewById(R.id.textView);
-        content3.setText("Using the onClick attibute of the Button. " +
-                "A new way to handle intents, unsure if it is best practice");
+        content3.setText(R.string.context3);
     }
-    //3rd way of using a Button
     public void goToButton1(View view) {
         Intent Intent = new Intent(this, Button1.class);
         startActivity(Intent);
@@ -29,4 +27,5 @@ public class Button3 extends AppCompatActivity {
         Intent Intent = new Intent(this, Button2.class);
         startActivity(Intent);
     }
+//    Each button has it's own method that is attributed to the onClick attribute of each button
 }

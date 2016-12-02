@@ -19,8 +19,7 @@ public class Button2 extends AppCompatActivity implements View.OnClickListener {
         setContentView(R.layout.activity_button2);
 
         content2 = (TextView) findViewById(R.id.textView);
-        content2.setText("Activity wide interface method. " +
-                "Clean, and is the preferred way of handling intents");
+        content2.setText(R.string.context2);
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         button1.setOnClickListener(this);
@@ -41,7 +40,6 @@ public class Button2 extends AppCompatActivity implements View.OnClickListener {
             default:
                 break;
         }
-
+// The advantage here is that all button intents are registered in the single onClick Method.
     }
-
 }
