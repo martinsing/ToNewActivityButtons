@@ -11,23 +11,25 @@
     tools:context="com.martinsing.tonewactivitybuttons.Button3">
 
     <TextView
-        android:text="@string/activity_3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="30sp"/>
+        android:text="@string/activity_3"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"/>
+        android:layout_margin="@dimen/activity_vertical_margin"
+        android:textSize="18sp"/>
 
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_vertical_margin"
         android:onClick="goToButton1"
         android:text="@string/to_activity_1" />
 
@@ -36,6 +38,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
+        android:layout_margin="@dimen/activity_vertical_margin"
         android:onClick="goToButton2"
         android:text="@string/to_activity_2" />
 
