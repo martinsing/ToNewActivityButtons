@@ -7,19 +7,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Button2 extends AppCompatActivity implements View.OnClickListener {
+/**
+ * Activity wide interface method using the switch statement. (Pro)
+ * The advantage here is that all button intents are registered in the single onClick Method.
+ */
+public class Activity3 extends AppCompatActivity implements View.OnClickListener {
 
     private Button button1;
     private Button button2;
-    private TextView content2;
+    private TextView content3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_button2);
+        setContentView(R.layout.activity_button3);
 
-        content2 = (TextView) findViewById(R.id.textView);
-        content2.setText(R.string.context2);
+        content3 = (TextView) findViewById(R.id.textView);
+        content3.setText(R.string.context3);
         button1 = (Button) findViewById(R.id.button1);
         button2 = (Button) findViewById(R.id.button2);
         button1.setOnClickListener(this);
@@ -30,16 +34,15 @@ public class Button2 extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.button1:
-                Intent intent1 = new Intent(this, Button1.class);
+                Intent intent1 = new Intent(this, Activity1.class);
                 startActivity(intent1);
                 break;
             case R.id.button2:
-                Intent intent2 = new Intent(this, Button3.class);
+                Intent intent2 = new Intent(this, Activity2.class);
                 startActivity(intent2);
                 break;
             default:
                 break;
         }
-// The advantage here is that all button intents are registered in the single onClick Method.
     }
 }

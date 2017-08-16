@@ -7,25 +7,30 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Button1 extends AppCompatActivity {
+/**
+ * Assigning an OnClickListener() via an anonymous class. (Intermediate)
+ * The disadvantage here is that there will be a lot of anonymous classes which will make
+ * readability difficult when reviewing.
+ */
+public class Activity2 extends AppCompatActivity {
 
     private Button button1;
     private Button button2;
-    private TextView content1;
+    private TextView content2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_button1);
+        setContentView(R.layout.activity_button2);
 
-        content1 = (TextView) findViewById(R.id.textView);
-        content1.setText(R.string.context1);
+        content2 = (TextView) findViewById(R.id.textView);
+        content2.setText(R.string.context2);
 
         button1 = (Button) findViewById(R.id.button1);
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Intent = new Intent(view.getContext(), Button2.class);
+                Intent Intent = new Intent(view.getContext(), Activity1.class);
                 view.getContext().startActivity(Intent);
             }
         });
@@ -34,11 +39,10 @@ public class Button1 extends AppCompatActivity {
         button2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent Intent = new Intent(view.getContext(), Button3.class);
+                Intent Intent = new Intent(view.getContext(), Activity3.class);
                 view.getContext().startActivity(Intent);
             }
         });
-//        The disadvantage here is that there will be a lot of anonymous classes which will make readability difficult when reviewing.
     }
 }
 
